@@ -77,7 +77,7 @@
 * 프로그램을 수행하는 데 순수하게 사용된 시간     
 * 입출력이나 다른 프로그램의 실행 시간이 포함되지 않는다.    
 
-$$ 컴퓨터의 성능 = {{1} \over {CPU 실행 시간}} $$    
+![컴퓨터의 성능](https://latex.codecogs.com/gif.latex?Computer%5C%20Performance%3D%7B1%20%5Cover%20CPU%20execution%5C%20time%7D)    
 
 따라서, 컴퓨터의 성능은 CPU의 실행 시간이 짧을 수록 성능이 좋다고 판단한다.    
 
@@ -106,17 +106,17 @@ M1에 대한 M2의 성능 비율
 > s: 시스템 전체의 성능 향상
 > m: M1의 실행 시간
 > 
-> $$s = {1 \over {{f \over n} + (1 - f)}}$$
+> ![s](https://latex.codecogs.com/gif.latex?s%20%3D%20%7B1%20%5Cover%20%7B%7Bf%20%5Cover%20n%7D%20&plus;%20%281%20-%20f%29%7D%7D)    
 >
 > 성능 개선이 없다면 n이 1이 된다.
 > 
 > <br>
 >      
 > 만약 n이 양의 극한값을 가지게 된다면, 즉 무한히 성능을 향상시킬 수 있다면,
-> n에 양의 무한대 값을 대입해서 $ f \over n $ 값을 0으로 수렴시킬 수 있다.
+> n에 양의 무한대 값을 대입해서 ![gif](https://latex.codecogs.com/gif.latex?f%20%5Cover%20n) 값을 0으로 수렴시킬 수 있다.
 > 그러면 다음 수식을 만족한다.
 > 
-> $$s = {1 \over {{f \over n} + (1 - f)}} ≤ {1 \over {1 - f}}$$
+> ![gif](https://latex.codecogs.com/gif.latex?s%20%3D%20%7B1%20%5Cover%20%7B%7Bf%20%5Cover%20n%7D%20&plus;%20%281%20-%20f%29%7D%7D%20%5Cleq%20%7B1%20%5Cover%20%7B1%20-%20f%7D%7D)    
 >
 > <br>
 > 
@@ -126,15 +126,15 @@ M1에 대한 M2의 성능 비율
 > * 이 프로그램에서 1시간 소요되는 부분은 병렬화할 수 없고, 나머지 19시간 소요되는 부분은 병렬화할 수 있다.
 > * 병렬화된 부분을 처리하는 데 사용되는 프로세서의 수에는 제한이 없다.(물리적으로는 불가능하지만 논리적으로는 가능한 전제)
 > 
-> 위 식을 살펴보면, $ f \over n $ 은 병렬화가 가능한 부분이고, $ 1 - f $는 병렬화(성능 개선)가 불가능한 부분이다.
+> 위 식을 살펴보면, ![gif](https://latex.codecogs.com/gif.latex?f%20%5Cover%20n) 은 병렬화가 가능한 부분이고, ![gif](https://latex.codecogs.com/gif.latex?1%20-%20f) 는 병렬화(성능 개선)가 불가능한 부분이다.
 > 
 > <br>
 > 
-> Case1: 싱글 코어라고 가정하면, $ f \over n $가 19시간이 소요되고, $ 1 - f $는 1시간이 소요된다.
-> 따라서 시스템 전체 성능 향상 s 는 $ 1 \over 20 $ 이다.
+> Case1: 싱글 코어라고 가정하면, ![gif](https://latex.codecogs.com/gif.latex?f%20%5Cover%20n)가 19시간이 소요되고, ![gif](https://latex.codecogs.com/gif.latex?1%20-%20f) 는 1시간이 소요된다.
+> 따라서 시스템 전체 성능 향상 s 는 ![gif](https://latex.codecogs.com/gif.latex?1%20%5Cover%2020) 이다.
 >     
-> Case2: 프로세서의 수가 무한대라고 가정하면, $ f \over n $는 0으로 수렴하고, $ 1 - f $는 여전히 1시간이 소요된다. 
-> 따라서 시스템 전체 성능 향상 s 는 $ 1 \over 1 $ 로 1이다.
+> Case2: 프로세서의 수가 무한대라고 가정하면, ![gif](https://latex.codecogs.com/gif.latex?f%20%5Cover%20n)는 0으로 수렴하고, ![gif](https://latex.codecogs.com/gif.latex?1%20-%20f) 는 여전히 1시간이 소요된다. 
+> 따라서 시스템 전체 성능 향상 s 는 ![gif](https://latex.codecogs.com/gif.latex?1%20%5Cover%201) 로 1이다.
 >     
 > 결론은 최대 20배의 성능 향상이 발생할 수 있다.
 > 
